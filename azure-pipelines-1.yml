@@ -6,7 +6,7 @@
 
 variables:
   dockerId: lhgregistry 
-  imageName: hello-world
+  imageName: helloworld
   pswd: 2auCgbd24PKEwJ4SgKMYZv8CazOuU6+q
 steps:
 - script: |
