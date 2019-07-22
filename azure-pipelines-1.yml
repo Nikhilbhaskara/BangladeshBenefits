@@ -13,7 +13,6 @@ pool:
 variables:
   dockerId: nikhilbhaskara 
   imageName: helloworld
-  pswd: mamatha123
 steps:
 - script: |
     docker build -t $(dockerId)/$(imageName)
