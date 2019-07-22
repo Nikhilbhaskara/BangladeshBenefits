@@ -6,7 +6,7 @@
 variables:
   dockerId: nikhilbhaskara 
   imageName: helloworld  
-  dockerPassword: mamatha123
+  
 steps:
 - script: |
     docker build -t $(dockerId)/$(imageName) .
