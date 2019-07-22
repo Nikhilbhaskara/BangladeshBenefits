@@ -5,16 +5,14 @@
 # https://aka.ms/yaml
 
 variables:
-  dockerId: LHGRegistry 
+  dockerId: lhgregistry 
   imageName: hello-world
   pswd: 2auCgbd24PKEwJ4SgKMYZv8CazOuU6+q
 steps:
 - script: |
-    docker build -t $(dockerId)/$(imageName)
-    docker login -u $(dockerId) -p $(pswd)
-    docker tag hello-world <lhgregistry.azurecr.io>/hello-world:v1
-    docker push <lhgregistry.azurecr.io>/hello-world:v1
-
+    docker build -t $(dockerId).azurecr.io/$(imageName) .
+    docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
+    docker push $(dockerId).azurecr.io/$(imageName)
 
 
 
