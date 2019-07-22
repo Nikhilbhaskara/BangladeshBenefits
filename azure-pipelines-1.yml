@@ -16,7 +16,6 @@ variables:
   pswd: mamatha123
 steps:
 - script: |
-    echo Hello, world!
     docker build -t $(dockerId)/$(imageName)
     docker login -u $(dockerId) -p $(pswd)
     docker tag $(imageName):latest $(imageName):latest
