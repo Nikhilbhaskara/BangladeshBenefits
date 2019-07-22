@@ -10,10 +10,7 @@ variables:
   pswd: 2auCgbd24PKEwJ4SgKMYZv8CazOuU6+q
 steps:
 - script: |
-    docker build -t $(dockerId).azurecr.io/$(imageName) .
+    docker build -t $(dockerId)/$(imageName)
     docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
-    docker tag hello-world <lhgregistry>/hello-world:v1
     docker push $(dockerId).azurecr.io/$(imageName)
-
-
 
