@@ -4,6 +4,11 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
 
 variables:
   dockerId: nikhilbhaskara 
