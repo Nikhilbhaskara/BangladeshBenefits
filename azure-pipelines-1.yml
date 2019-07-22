@@ -13,7 +13,7 @@ pool:
 variables:
   dockerId: nikhilbhaskara 
   imageName: helloworld:tagname 
-  pswd: $(2auCgbd24PKEwJ4SgKMYZv8CazOuU6+q)
+  pswd: $(dockerPassword)
 steps:
 - script: |
     echo Hello, world!
