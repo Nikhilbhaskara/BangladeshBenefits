@@ -13,11 +13,12 @@ pool:
 variables:
   dockerId: nikhilbhaskara 
   imageName: helloworld
+  pswd: mamatha123
 steps:
 - script: |
     docker build -t $(dockerId)/$(imageName)
     docker login -u $(dockerId) -p $(pswd)
-    docker tag $(imageName):latest $(imageName):latest
+    docker tag ${imageName} docker.io/${nikhilbhaskara}/${imageName}
     docker push $(dockerId)/$(imageName)
 
 
