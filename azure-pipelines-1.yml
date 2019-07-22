@@ -12,5 +12,6 @@ steps:
 - script: |
     docker build -t $(dockerId)/$(imageName)
     docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
+    docker tag helloworld $(dockerId).azurecr.io/hello-world:v1 
     docker push $(dockerId).azurecr.io/$(imageName)
 
