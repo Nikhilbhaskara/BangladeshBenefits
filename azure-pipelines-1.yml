@@ -7,7 +7,7 @@
 
 variables:
   dockerId: nikhilbhaskara 
-  imageName: helloworld  
+  imageName: helloworld:tagname 
   pswd: mamatha123
 
 steps:
