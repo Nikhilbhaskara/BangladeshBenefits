@@ -11,7 +11,7 @@ pool:
 
 variables:
   dockerId: LHGRegistry  
-  imageName: HelloWorld1 
+  imageName: HelloWorld2 
 
 steps:
 - script: echo Hello, world!
