@@ -9,12 +9,21 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  dockerId: LHGRegistry  
+  imageName: HelloWorld 
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
-    docker login -u $(nikhilbhaskara) -p $(mamatha123) 
+    docker build -t $(dockerId).azurecr.io/$(imageName) .
+    docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
+    docker push $(dockerId).azurecr.io/$(imageName) 
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+  env:
+    pswd: $(2auCgbd24PKEwJ4SgKMYZv8CazOuU6+q) 
